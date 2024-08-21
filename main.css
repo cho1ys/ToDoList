@@ -1,0 +1,218 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    font-family: "Noto Sans KR", sans-serif;
+    text-align: center;
+}
+.container{
+    background-color: black;
+    height: 150px;
+    width: 100%;
+    margin : -35px 0px;
+    z-index: -2;
+}
+h1{
+    height: 100%;
+    padding-top : 2%;
+    font-size: 40px;
+}
+.headline1{
+    color: skyblue;
+}
+.headline2{
+    color : rgb(81, 68, 192)
+}
+
+.todo{
+    background-color: #464444;
+    border: 0px;
+    border-radius: 4px;
+    width: 500px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 1%;
+}
+.add-button{
+    position: relative;
+    color: white;
+    background-color: rgb(93, 156, 216);
+    border-radius: 4px;
+    border: 0;
+    height: 50px;
+    width: 80px;
+}
+ .add-button b{
+    font-size: 15px;
+    margin-left : -25%;
+}
+.plus{
+    position: absolute;
+    width: 20px;
+    left: 52px;
+    top : 31%;
+
+} 
+
+.list{
+    margin-top: 2%;
+    margin-bottom : 3%;
+}
+.count{
+    display: inline-block; /* or block */
+    padding: 0px 10px;
+    color: white;
+    background-color: #707070;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.keyCount{
+    position: absolute;
+    left : 25%;
+    color: skyblue;
+}
+.doneCount{
+    position: absolute;
+    right: 25%;
+    color : rgb(81, 68, 192)
+}
+.container2 hr{
+    width: 50%;
+    border: 1px solid white ;
+    opacity: 0.5;
+}
+.todo-list {
+    color : rgb(255, 255, 255);
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    height: 100vh; 
+}
+.todo-list div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    background-color: #464444;
+    border: 1px solid #7a7a7a;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative; /* 자식 요소를 절대 위치로 배치하기 위해 필요 */
+}
+.add-button:active, .save-button:active {
+    background-color: rgb(111, 196, 230); /* 약간 어두운 색으로 변화 */
+    transform: translateY(2px);
+}
+
+.todo-list input[type="checkbox"]:hover,.todo-list button:hover{
+    opacity: 0.5;
+    transition: 0.4s;
+}
+.todo-list input[type="checkbox"]:checked{
+    background-image: url(./icon_imgs/check_img.png);
+    background-color: rgb(81, 68, 192);
+    border: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.todo-list button {
+    background-color: transparent;
+    border: 0;
+}
+.todo-list .delete{
+    position : absolute;
+    right : 3%;
+    bottom : 35%;
+}
+.todo-list .edit{
+    position : absolute;
+    right : 7%;
+    bottom: 15%;
+}
+.todo-list button .edit {
+    width: 25px; /* 아이콘 크기 설정 */
+    height: 25px; /* 아이콘 크기 설정 */
+}
+.todo-list input{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid skyblue;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.todo-list span{
+    margin-left: 3%;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal h2{
+    color : skyblue;
+    margin-top : 0%;
+    margin-bottom : 15%;
+}
+.modal-content {
+    background-color: black;
+    margin: 15% auto;
+    padding: 20px;
+    color : white;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.modal input{
+    background-color: #464444;
+    border: 0px;
+    border-radius: 4px;
+    width: 300px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 1%;
+    margin-bottom : 3%;
+}
+.save-button{
+    position: relative;
+    color: white;
+    background-color: rgb(93, 156, 216);
+    border-radius: 4px;
+    border: 0;
+    height: 42px;
+    width: 80px;
+}
+.save-button b{
+    font-size: 15px;
+    margin-left : -25%;
+}
+.save-button .plus{
+    position: absolute;
+    width: 20px;
+    left: 52px;
+    top : 25%;
+
+}

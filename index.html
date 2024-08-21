@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <script defer src = "./main.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Playwrite+DK+Uloopet:wght@100..400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- 기존 내용 -->
+     <section class="container">
+    <h1><img src="./icon_imgs/rocket.png" class="rocket"><b class="headline1">ToDo</b> <b class="headline2">List</b></h1>
+    </section>
+    <section class = "container2">
+    <input class="todo" placeholder="새로운 할 일 추가하기">
+    <button class="add-button"><b>입력</b> <img src="./icon_imgs/plus.png" class="plus"></button>
+    <div class="list">
+    <h4 class="keyCount">나의 할 일 목록</h4>
+    <h4 class="doneCount">완료된 목록</h4>
+    <br><br>
+    <hr class = "hr1">  
+</div>
+
+    
+    <div class="todo-list">
+        <h2 class="notask"><img src="./icon_imgs/empty_img.png" class="empty"><br><br>아직 등록된 할 일이 없습니다<br>작업을 생성하고 할 일 목록을 정리하세요</h2>
+    </div>
+</section>
+    <!-- 모달 구조 -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>수정하기</h2>
+            <input type="text" class="edit-input" placeholder="할 일을 적으시오"/>
+            <button class="save-button"><b>저장</b> <img src="./icon_imgs/plus.png" class="plus"></button>
+        </div>
+    </div>
+</body>
+
+</html>
